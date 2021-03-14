@@ -13,7 +13,7 @@ router.post("/submit", function (req, res) {
     if (err) 
       console.log("error");
     else 
-      console.log("Database created!");
+      console.log("Database connected!");
     //client.close();
   });
   res.send("got it");
