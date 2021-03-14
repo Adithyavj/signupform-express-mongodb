@@ -12,8 +12,8 @@ router.post("/submit", function (req, res) {
   MongoClient.connect("mongodb://localhost:27017", function (err, client) {
     if (err) 
       console.log("error");
-    else 
-      console.log("Database connected!");
+    else
+      client.db('sampledb').collection('user').insertOne(req.body)
     //client.close();
   });
   res.send("got it");
